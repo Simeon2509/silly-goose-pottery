@@ -1,0 +1,82 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --rose: #B85C52;
+  --rose-dark: #8C3E36;
+  --rose-light: #D4918A;
+  --rose-pale: #E8C4BF;
+  --cream: #F0EDE6;
+  --cream-dark: #E2DDD4;
+  --ink: #2E1F1C;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+@keyframes floatup {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.float { animation: floatup 5s ease-in-out infinite; }
+.marquee-track { animation: marquee 22s linear infinite; }
+
+nav a:hover { opacity: 1 !important; }
+
+.btn-rose {
+  padding: 0.85rem 2.2rem;
+  background: var(--rose);
+  color: var(--cream);
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-rose:hover { background: var(--rose-dark); }
+
+.btn-cream {
+  padding: 0.85rem 2.4rem;
+  background: var(--cream);
+  color: var(--rose-dark);
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.btn-cream:hover { background: #fff; }
+
+.product-card:hover .product-img { transform: scale(1.04); }
+.product-img { transition: transform 0.5s ease; }
+
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .about-grid { grid-template-columns: 1fr !important; }
+  .steps-grid { grid-template-columns: 1fr 1fr !important; }
+  .product-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .cta-strip { flex-direction: column !important; gap: 2rem !important; text-align: center; }
+  .footer-inner { flex-direction: column !important; gap: 1.5rem !important; text-align: center; }
+  nav { padding: 1rem 1.5rem !important; }
+  .nav-links { display: none !important; }
+  section, .section-pad { padding: 4rem 1.5rem !important; }
+  .hero-left { padding: 3rem 1.5rem !important; }
+}
