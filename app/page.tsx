@@ -30,7 +30,7 @@ export default function Home() {
         borderBottom: '1px solid rgba(184,92,82,0.15)',
       }}>
         <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none' }}>
-          <Image src="/logo.jpg" alt="Silly Goose Pottery" width={52} height={52} style={{ objectFit: 'contain', borderRadius: '2px' }} />
+          <Image src="/logo.jpg" alt="Silly Goose Pottery" width={88} height={88} style={{ objectFit: 'contain', borderRadius: '2px' }} />
           <span style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.2rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--rose-dark)' }}>
             Silly Goose Pottery
           </span>
@@ -198,7 +198,7 @@ export default function Home() {
       <footer style={{ padding: '2.5rem 4rem', borderTop: '1px solid rgba(184,92,82,0.15)' }}>
         <div className="footer-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
-            <Image src="/logo.jpg" alt="Silly Goose Pottery" width={32} height={32} style={{ objectFit: 'contain' }} />
+            <Image src="/logo.jpg" alt="Silly Goose Pottery" width={54} height={54} style={{ objectFit: 'contain' }} />
             <span style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '0.95rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--rose-dark)' }}>
               Silly Goose Pottery
             </span>
