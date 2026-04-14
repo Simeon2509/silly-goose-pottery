@@ -69,7 +69,7 @@ export default function Home() {
           </div>
         </div>
         <div style={{ background: 'var(--cream-dark)', overflow: 'hidden' }}>
-          <Image src="/hero_bowl.jpg" alt="Handthrown petal bowl" width={900} height={1200} style={{ width: '100%', height: '100%', objectFit: 'cover' }} priority />
+          <Image src="/p3_incense_holders_set.jpg" alt="Handthrown incense holders set" width={900} height={1200} style={{ width: '100%', height: '100%', objectFit: 'cover' }} priority />
         </div>
       </section>
 
