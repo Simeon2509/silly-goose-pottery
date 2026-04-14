@@ -1,5 +1,18 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Shop Handthrown Pottery — Bowls, Mugs & More',
+  description: 'Browse the full collection of handthrown ceramics by Silly Goose Pottery. Wheel-thrown bowls, mugs, cups, plates, and pet bowls — all made by hand in Denver, Colorado. Each piece is one of a kind.',
+  openGraph: {
+    title: 'Shop Handthrown Pottery | Silly Goose Pottery · Denver, CO',
+    description: 'Browse handthrown bowls, mugs, cups, plates, and more. Every piece is wheel-thrown and glazed by hand in Denver, CO.',
+    url: 'https://sillygoosepottery.com/shop',
+    images: [{ url: '/p8_rose_mug.jpg', width: 900, height: 900, alt: 'Handthrown rose mug by Silly Goose Pottery' }],
+  },
+  alternates: { canonical: 'https://sillygoosepottery.com/shop' },
+}
 
 const PRODUCTS = [
   { name: 'Petal Bowl No. 1', type: 'Bowl', price: '$93', img: '/p14_petal_bowl_large.jpg', desc: 'Large free-form petal bowl in rose and white glaze. A statement piece for any table.' },
@@ -36,7 +49,7 @@ export default function Shop() {
           </span>
         </Link>
         <ul className="nav-links" style={{ display: 'flex', gap: '2.5rem', listStyle: 'none' }}>
-          {([['Shop','/shop'],['About','/#about'],['Process','/#process'],['Instagram','https://instagram.com/sillygoosepottery'],['Contact','/#contact']] as [string,string][]).map(([label, href]) => (
+          {([['Shop','/shop'],['Custom','/custom'],['About','/#about'],['Process','/#process'],['Instagram','https://instagram.com/sillygoosepottery'],['Contact','/#contact']] as [string,string][]).map(([label, href]) => (
             <li key={label}>
               <a href={href} target={label === 'Instagram' ? '_blank' : undefined} rel={label === 'Instagram' ? 'noopener noreferrer' : undefined} style={{ fontSize: '0.73rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: label === 'Shop' ? 'var(--rose)' : 'var(--ink)', opacity: label === 'Shop' ? 1 : 0.55, textDecoration: 'none' }}>
                 {label}
