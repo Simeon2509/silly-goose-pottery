@@ -29,9 +29,33 @@ const PRODUCTS = [
   { name: 'Ceramic Wall Hooks', type: 'Set of 3', price: '$33', img: '/p4_wall_hooks.jpg' },
 ]
 
+const PRODUCT_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Handthrown Pottery by Silly Goose Pottery',
+  description: 'One-of-a-kind wheel-thrown ceramics made in Denver, Colorado — bowls, mugs, cups, plates, pet bowls, and more.',
+  url: 'https://sillygoosepottery.com/shop',
+  numberOfItems: 12,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, item: { '@type': 'Product', name: 'Petal Bowl No. 1', description: 'Large free-form petal bowl in rose and white glaze. A statement piece for any table.', image: 'https://sillygoosepottery.com/p14_petal_bowl_large.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '93', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 2, item: { '@type': 'Product', name: 'Petal Bowl No. 2', description: 'Organic petal bowl with deep red glaze and teal center. Each one is completely unique.', image: 'https://sillygoosepottery.com/p13_petal_bowl_red.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '83', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 3, item: { '@type': 'Product', name: 'Petal Bowl No. 3', description: 'Smaller petal bowl with soft rose and grey glaze. Perfect as a fruit bowl or centerpiece.', image: 'https://sillygoosepottery.com/p1_petal_bowl_small.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '73', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 4, item: { '@type': 'Product', name: 'Sunrise Bowl', description: 'Wide-rimmed bowl in sunset tones of amber and dusty rose. Food safe and dishwasher safe.', image: 'https://sillygoosepottery.com/p5_sunrise_bowl.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '48', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 5, item: { '@type': 'Product', name: 'Midnight Plate', description: 'Deep cobalt blue plate with irregular organic rim. A showstopper for dinner parties.', image: 'https://sillygoosepottery.com/p6_midnight_plate.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '55', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 6, item: { '@type': 'Product', name: 'Periwinkle Dishes', description: 'Matching set of two periwinkle blue dishes. Great for rings, trinkets, or tapas.', image: 'https://sillygoosepottery.com/p7_blue_dishes.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '43', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 7, item: { '@type': 'Product', name: 'Rose Mug', description: 'Chunky rose mug with a hand-pulled handle. Holds a generous 12oz. Food safe.', image: 'https://sillygoosepottery.com/p8_rose_mug.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '33', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 8, item: { '@type': 'Product', name: 'Half-Dip Cup', description: 'Handleless cup with a half-dip rose glaze over raw stoneware. Minimal and modern.', image: 'https://sillygoosepottery.com/p12_half_dip_cup.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '28', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 9, item: { '@type': 'Product', name: 'Honey Cup', description: 'Small rounded cup in warm honey glaze. Perfect for espresso, matcha, or small sips.', image: 'https://sillygoosepottery.com/p11_honey_cup.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '25', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 10, item: { '@type': 'Product', name: 'Sage Pet Bowl', description: 'Handthrown pet bowl in matte sage glaze. Sturdy, food safe, and beautiful enough to display.', image: 'https://sillygoosepottery.com/p10_sage_dog_bowl_side.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '38', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 11, item: { '@type': 'Product', name: 'Flower Incense Holders', description: 'Set of 3 flower-shaped incense holders in assorted glazes. A sweet gift or altar piece.', image: 'https://sillygoosepottery.com/p3_incense_holders_set.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '23', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+    { '@type': 'ListItem', position: 12, item: { '@type': 'Product', name: 'Ceramic Wall Hooks', description: 'Set of 3 ceramic wall hooks in sage, mauve, and terracotta. Mounting hardware included.', image: 'https://sillygoosepottery.com/p4_wall_hooks.jpg', brand: { '@type': 'Brand', name: 'Silly Goose Pottery' }, offers: { '@type': 'Offer', priceCurrency: 'USD', price: '33', availability: 'https://schema.org/InStock', seller: { '@type': 'Organization', name: 'Silly Goose Pottery' } } } },
+  ],
+}
+
 export default function Home() {
   return (
     <main style={{ background: 'var(--cream)' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PRODUCT_SCHEMA) }} />
 
       {/* NAV */}
       <nav style={{

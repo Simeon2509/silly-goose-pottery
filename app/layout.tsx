@@ -42,9 +42,6 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
-  alternates: {
-    canonical: 'https://sillygoosepottery.com',
-  },
 }
 
 export default function RootLayout({
@@ -65,26 +62,47 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Store',
+              '@type': 'LocalBusiness',
+              '@id': 'https://sillygoosepottery.com',
               name: 'Silly Goose Pottery',
-              description: 'Handthrown, one-of-a-kind pottery made in Denver, Colorado. Bowls, mugs, plates, and custom ceramic sets for homes, cafés, and restaurants.',
+              description: 'Handthrown, one-of-a-kind pottery made in Denver, Colorado. Wheel-thrown bowls, mugs, plates, and custom ceramic sets for homes, cafés, and restaurants. Every piece glazed and fired by hand.',
               url: 'https://sillygoosepottery.com',
               image: 'https://sillygoosepottery.com/p3_incense_holders_set.jpg',
+              logo: 'https://sillygoosepottery.com/logo.jpg',
+              founder: {
+                '@type': 'Person',
+                name: 'Silly Goose Pottery',
+                jobTitle: 'Potter & Studio Owner',
+              },
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Denver',
                 addressRegion: 'CO',
                 addressCountry: 'US',
               },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 39.7392,
+                longitude: -104.9903,
+              },
+              areaServed: [
+                { '@type': 'City', name: 'Denver' },
+                { '@type': 'State', name: 'Colorado' },
+                { '@type': 'Country', name: 'United States' },
+              ],
               sameAs: ['https://instagram.com/sillygoosepottery'],
               priceRange: '$23–$93',
+              currenciesAccepted: 'USD',
+              category: 'Pottery & Ceramics Studio',
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
                 name: 'Handthrown Pottery Collection',
                 itemListElement: [
-                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Handthrown Ceramic Bowls' } },
-                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Handthrown Mugs & Cups' } },
-                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Custom Ceramic Sets for Cafés & Restaurants' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Handthrown Ceramic Bowls', category: 'Bowls' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Handthrown Mugs & Cups', category: 'Drinkware' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Handthrown Plates & Dishes', category: 'Tableware' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Handthrown Pet Bowls', category: 'Pet Accessories' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Custom Ceramic Sets for Cafés & Restaurants', category: 'Custom Orders' } },
                 ],
               },
             }),
