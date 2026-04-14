@@ -2,18 +2,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const PRODUCTS = [
-  { name: 'Petal Bowl No. 1', type: 'Bowl', price: '$185', img: '/p14_petal_bowl_large.jpg', desc: 'Large free-form petal bowl in rose and white glaze. A statement piece for any table.' },
-  { name: 'Petal Bowl No. 2', type: 'Bowl', price: '$165', img: '/p13_petal_bowl_red.jpg', desc: 'Organic petal bowl with deep red glaze and teal center. Each one is completely unique.' },
-  { name: 'Petal Bowl No. 3', type: 'Bowl', price: '$145', img: '/p1_petal_bowl_small.jpg', desc: 'Smaller petal bowl with soft rose and grey glaze. Perfect as a fruit bowl or centerpiece.' },
-  { name: 'Sunrise Bowl', type: 'Bowl', price: '$95', img: '/p5_sunrise_bowl.jpg', desc: 'Wide-rimmed bowl in sunset tones of amber and dusty rose. Food safe and dishwasher safe.' },
-  { name: 'Midnight Plate', type: 'Plate', price: '$110', img: '/p6_midnight_plate.jpg', desc: 'Deep cobalt blue plate with irregular organic rim. A showstopper for dinner parties.' },
-  { name: 'Periwinkle Dishes', type: 'Set of 2', price: '$85', img: '/p7_blue_dishes.jpg', desc: 'Matching set of two periwinkle blue dishes. Great for rings, trinkets, or tapas.' },
-  { name: 'Rose Mug', type: 'Mug', price: '$65', img: '/p8_rose_mug.jpg', desc: 'Chunky rose mug with a hand-pulled handle. Holds a generous 12oz. Food safe.' },
-  { name: 'Half-Dip Cup', type: 'Cup', price: '$55', img: '/p12_half_dip_cup.jpg', desc: 'Handleless cup with a half-dip rose glaze over raw stoneware. Minimal and modern.' },
-  { name: 'Honey Cup', type: 'Cup', price: '$50', img: '/p11_honey_cup.jpg', desc: 'Small rounded cup in warm honey glaze. Perfect for espresso, matcha, or small sips.' },
-  { name: 'Sage Pet Bowl', type: 'Pet Bowl', price: '$75', img: '/p10_sage_dog_bowl_side.jpg', desc: 'Handthrown pet bowl in matte sage glaze. Sturdy, food safe, and beautiful enough to display.' },
-  { name: 'Flower Incense Holders', type: 'Set of 3', price: '$45', img: '/p3_incense_holders_set.jpg', desc: 'Set of 3 flower-shaped incense holders in assorted glazes. A sweet gift or altar piece.' },
-  { name: 'Ceramic Wall Hooks', type: 'Set of 3', price: '$65', img: '/p4_wall_hooks.jpg', desc: 'Set of 3 ceramic wall hooks in sage, mauve, and terracotta. Mounting hardware included.' },
+  { name: 'Petal Bowl No. 1', type: 'Bowl', price: '$93', img: '/p14_petal_bowl_large.jpg', desc: 'Large free-form petal bowl in rose and white glaze. A statement piece for any table.' },
+  { name: 'Petal Bowl No. 2', type: 'Bowl', price: '$83', img: '/p13_petal_bowl_red.jpg', desc: 'Organic petal bowl with deep red glaze and teal center. Each one is completely unique.' },
+  { name: 'Petal Bowl No. 3', type: 'Bowl', price: '$73', img: '/p1_petal_bowl_small.jpg', desc: 'Smaller petal bowl with soft rose and grey glaze. Perfect as a fruit bowl or centerpiece.' },
+  { name: 'Sunrise Bowl', type: 'Bowl', price: '$48', img: '/p5_sunrise_bowl.jpg', desc: 'Wide-rimmed bowl in sunset tones of amber and dusty rose. Food safe and dishwasher safe.' },
+  { name: 'Midnight Plate', type: 'Plate', price: '$55', img: '/p6_midnight_plate.jpg', desc: 'Deep cobalt blue plate with irregular organic rim. A showstopper for dinner parties.' },
+  { name: 'Periwinkle Dishes', type: 'Set of 2', price: '$43', img: '/p7_blue_dishes.jpg', desc: 'Matching set of two periwinkle blue dishes. Great for rings, trinkets, or tapas.' },
+  { name: 'Rose Mug', type: 'Mug', price: '$33', img: '/p8_rose_mug.jpg', desc: 'Chunky rose mug with a hand-pulled handle. Holds a generous 12oz. Food safe.' },
+  { name: 'Half-Dip Cup', type: 'Cup', price: '$28', img: '/p12_half_dip_cup.jpg', desc: 'Handleless cup with a half-dip rose glaze over raw stoneware. Minimal and modern.' },
+  { name: 'Honey Cup', type: 'Cup', price: '$25', img: '/p11_honey_cup.jpg', desc: 'Small rounded cup in warm honey glaze. Perfect for espresso, matcha, or small sips.' },
+  { name: 'Sage Pet Bowl', type: 'Pet Bowl', price: '$38', img: '/p10_sage_dog_bowl_side.jpg', desc: 'Handthrown pet bowl in matte sage glaze. Sturdy, food safe, and beautiful enough to display.' },
+  { name: 'Flower Incense Holders', type: 'Set of 3', price: '$23', img: '/p3_incense_holders_set.jpg', desc: 'Set of 3 flower-shaped incense holders in assorted glazes. A sweet gift or altar piece.' },
+  { name: 'Ceramic Wall Hooks', type: 'Set of 3', price: '$33', img: '/p4_wall_hooks.jpg', desc: 'Set of 3 ceramic wall hooks in sage, mauve, and terracotta. Mounting hardware included.' },
 ]
 
 export default function Shop() {

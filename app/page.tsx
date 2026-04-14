@@ -2,18 +2,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const PRODUCTS = [
-  { name: 'Petal Bowl No. 1', type: 'Bowl', price: '$185', img: '/p14_petal_bowl_large.jpg' },
-  { name: 'Petal Bowl No. 2', type: 'Bowl', price: '$165', img: '/p13_petal_bowl_red.jpg' },
-  { name: 'Petal Bowl No. 3', type: 'Bowl', price: '$145', img: '/p1_petal_bowl_small.jpg' },
-  { name: 'Sunrise Bowl', type: 'Bowl', price: '$95', img: '/p5_sunrise_bowl.jpg' },
-  { name: 'Midnight Plate', type: 'Plate', price: '$110', img: '/p6_midnight_plate.jpg' },
-  { name: 'Periwinkle Dishes', type: 'Set of 2', price: '$85', img: '/p7_blue_dishes.jpg' },
-  { name: 'Rose Mug', type: 'Mug', price: '$65', img: '/p8_rose_mug.jpg' },
-  { name: 'Half-Dip Cup', type: 'Cup', price: '$55', img: '/p12_half_dip_cup.jpg' },
-  { name: 'Honey Cup', type: 'Cup', price: '$50', img: '/p11_honey_cup.jpg' },
-  { name: 'Sage Pet Bowl', type: 'Pet Bowl', price: '$75', img: '/p10_sage_dog_bowl_side.jpg' },
-  { name: 'Flower Incense Holders', type: 'Set of 3', price: '$45', img: '/p3_incense_holders_set.jpg' },
-  { name: 'Ceramic Wall Hooks', type: 'Set of 3', price: '$65', img: '/p4_wall_hooks.jpg' },
+  { name: 'Petal Bowl No. 1', type: 'Bowl', price: '$93', img: '/p14_petal_bowl_large.jpg' },
+  { name: 'Petal Bowl No. 2', type: 'Bowl', price: '$83', img: '/p13_petal_bowl_red.jpg' },
+  { name: 'Petal Bowl No. 3', type: 'Bowl', price: '$73', img: '/p1_petal_bowl_small.jpg' },
+  { name: 'Sunrise Bowl', type: 'Bowl', price: '$48', img: '/p5_sunrise_bowl.jpg' },
+  { name: 'Midnight Plate', type: 'Plate', price: '$55', img: '/p6_midnight_plate.jpg' },
+  { name: 'Periwinkle Dishes', type: 'Set of 2', price: '$43', img: '/p7_blue_dishes.jpg' },
+  { name: 'Rose Mug', type: 'Mug', price: '$33', img: '/p8_rose_mug.jpg' },
+  { name: 'Half-Dip Cup', type: 'Cup', price: '$28', img: '/p12_half_dip_cup.jpg' },
+  { name: 'Honey Cup', type: 'Cup', price: '$25', img: '/p11_honey_cup.jpg' },
+  { name: 'Sage Pet Bowl', type: 'Pet Bowl', price: '$38', img: '/p10_sage_dog_bowl_side.jpg' },
+  { name: 'Flower Incense Holders', type: 'Set of 3', price: '$23', img: '/p3_incense_holders_set.jpg' },
+  { name: 'Ceramic Wall Hooks', type: 'Set of 3', price: '$33', img: '/p4_wall_hooks.jpg' },
 ]
 
 export default function Home() {
