@@ -112,7 +112,7 @@ export default function Home() {
             <Image src="/about2.jpg" alt="Midnight plate" width={900} height={675} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ aspectRatio: '1/1', borderRadius: '4px', overflow: 'hidden', position: 'relative' }}>
-            <Image src="/goose_dog.jpg" alt="Goose the dog in the Colorado mountains" width={600} height={1000} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }} />
+            <Image src="/goose_dog.jpg" alt="Goose the dog in the Colorado mountains" width={600} height={1000} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'calc(50% - 1.5cm) calc(50% - 1.5cm)' }} />
             <div style={{ position: 'absolute', bottom: '0.75rem', left: '0.75rem', background: 'rgba(240,237,230,0.9)', padding: '0.3rem 0.7rem', borderRadius: '2px' }}>
               <span style={{ fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--rose-dark)', fontFamily: '"Jost", sans-serif' }}>Goose, Chief Morale Officer</span>
             </div>
