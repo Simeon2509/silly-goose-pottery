@@ -61,9 +61,14 @@ export default function Custom() {
           <p style={{ fontSize: '1rem', lineHeight: 1.85, opacity: 0.6, fontWeight: 300, maxWidth: '460px', marginBottom: '2.5rem' }}>
             Every custom order is still made the same way as everything else here: thrown on the wheel, trimmed by hand, dipped in glaze, and fired in the kiln. The only difference is that we do it with your vision in mind.
           </p>
-          <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer">
-            <button className="btn-rose">Start a Conversation on Instagram</button>
-          </a>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer">
+              <button className="btn-rose">Start a Conversation on Instagram</button>
+            </a>
+            <a href="mailto:sillygoosepottery@gmail.com" style={{ fontSize: '0.8rem', letterSpacing: '0.08em', color: 'var(--ink)', opacity: 0.5, textDecoration: 'none' }}>
+              or email sillygoosepottery@gmail.com
+            </a>
+          </div>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
           <div style={{ aspectRatio: '1/1', borderRadius: '4px', overflow: 'hidden' }}>
@@ -145,7 +150,7 @@ export default function Custom() {
             {
               n: '01',
               title: 'Reach Out',
-              text: 'Send a DM on Instagram or use the contact button below. Share what you have in mind — even a rough idea is a great starting point.',
+              text: 'Send a DM on Instagram, email sillygoosepottery@gmail.com, or use the contact button below. Share what you have in mind — even a rough idea is a great starting point.',
             },
             {
               n: '02',
@@ -223,12 +228,17 @@ export default function Custom() {
             Let&apos;s make something<br />together
           </h2>
           <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: 'rgba(240,237,230,0.7)', fontWeight: 300, marginTop: '0.75rem', maxWidth: '420px' }}>
-            The best way to get started is a quick DM on Instagram. Tell us what you&apos;re thinking and we&apos;ll take it from there.
+            DM on Instagram or drop us an email — either way we&apos;ll get back to you quickly.
           </p>
         </div>
-        <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer">
-          <button className="btn-cream">DM on Instagram</button>
-        </a>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.75rem' }}>
+          <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer">
+            <button className="btn-cream">DM on Instagram</button>
+          </a>
+          <a href="mailto:sillygoosepottery@gmail.com" style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'rgba(240,237,230,0.65)', textDecoration: 'none' }}>
+            sillygoosepottery@gmail.com
+          </a>
+        </div>
       </div>
 
       {/* FOOTER */}

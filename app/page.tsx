@@ -261,9 +261,14 @@ export default function Home() {
             Something made<br />just for you
           </h2>
         </div>
-        <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer">
-          <button className="btn-cream">Start a Commission</button>
-        </a>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.75rem' }}>
+          <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer">
+            <button className="btn-cream">Start a Commission</button>
+          </a>
+          <a href="mailto:sillygoosepottery@gmail.com" style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'rgba(240,237,230,0.7)', textDecoration: 'none' }}>
+            sillygoosepottery@gmail.com
+          </a>
+        </div>
       </div>
 
       {/* FOOTER */}
@@ -275,13 +280,16 @@ export default function Home() {
               Silly Goose Pottery
             </span>
           </a>
-          <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none' }}>
-            {([['Shop','/shop'],['Custom','/custom'],['About','#about'],['Instagram','https://instagram.com/sillygoosepottery'],['Contact','#contact']] as [string,string][]).map(([item, href]) => (
-              <li key={item}>
-                <a href={href} target={item === 'Instagram' ? '_blank' : undefined} rel={item === 'Instagram' ? 'noopener noreferrer' : undefined} style={{ fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.35, textDecoration: 'none' }}>{item}</a>
-              </li>
-            ))}
-          </ul>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+            <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none' }}>
+              {([['Shop','/shop'],['Custom','/custom'],['About','#about'],['Instagram','https://instagram.com/sillygoosepottery'],['Contact','#contact']] as [string,string][]).map(([item, href]) => (
+                <li key={item}>
+                  <a href={href} target={item === 'Instagram' ? '_blank' : undefined} rel={item === 'Instagram' ? 'noopener noreferrer' : undefined} style={{ fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.35, textDecoration: 'none' }}>{item}</a>
+                </li>
+              ))}
+            </ul>
+            <a href="mailto:sillygoosepottery@gmail.com" style={{ fontSize: '0.68rem', letterSpacing: '0.1em', color: 'var(--ink)', opacity: 0.35, textDecoration: 'none' }}>sillygoosepottery@gmail.com</a>
+          </div>
           <p style={{ fontSize: '0.68rem', opacity: 0.28, letterSpacing: '0.08em' }}>&copy; 2026 Silly Goose Pottery &middot; Denver, CO</p>
         </div>
       </footer>
