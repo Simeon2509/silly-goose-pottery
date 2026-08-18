@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import ContactForm from './ContactForm'
 import Nav from './Nav'
 
 export const metadata: Metadata = {
@@ -283,26 +282,26 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" style={{ padding: '7rem 4rem', background: 'var(--cream-dark)', borderTop: '1px solid rgba(184,92,82,0.15)' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '6rem', alignItems: 'start' }} className="contact-grid">
-          <div>
-            <p style={{ fontSize: '0.7rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--rose)', marginBottom: '1rem' }}>Get in Touch</p>
-            <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', marginBottom: '1.5rem' }}>
-              Something made<br />just for you
-            </h2>
-            <p style={{ fontSize: '0.95rem', lineHeight: 1.85, opacity: 0.6, fontWeight: 300, marginBottom: '2.5rem' }}>
-              Whether you&apos;re after a custom commission, a set for your café, or just have a question about the shop — send a message and I&apos;ll get back to you within 2–3 days.
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <a href="mailto:sillygoosepottery@gmail.com" style={{ fontSize: '0.78rem', letterSpacing: '0.1em', color: 'var(--rose-dark)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <span style={{ opacity: 0.5 }}>✉</span> sillygoosepottery@gmail.com
-              </a>
-              <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.78rem', letterSpacing: '0.1em', color: 'var(--rose-dark)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <span style={{ opacity: 0.5 }}>◎</span> @sillygoosepottery
-              </a>
-            </div>
-          </div>
-          <ContactForm />
+      <section id="contact" style={{ padding: '7rem 4rem', background: 'var(--cream-dark)', borderTop: '1px solid rgba(184,92,82,0.15)', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--rose)', marginBottom: '1rem' }}>Get in Touch</p>
+        <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', marginBottom: '1.25rem' }}>
+          Something made just for you
+        </h2>
+        <p style={{ fontSize: '0.95rem', lineHeight: 1.85, opacity: 0.6, fontWeight: 300, maxWidth: '480px', margin: '0 auto 2.5rem' }}>
+          Questions about the shop, custom orders, or wholesale — reach out on Instagram or by email and I&apos;ll get back to you within 2–3 days.
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+          <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer"
+            style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.88rem', letterSpacing: '0.08em', color: 'var(--rose-dark)', fontWeight: 500 }}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style={{ flexShrink: 0 }}>
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            @sillygoosepottery
+          </a>
+          <a href="mailto:sillygoosepottery@gmail.com"
+            style={{ fontSize: '0.82rem', letterSpacing: '0.06em', color: 'var(--ink)', opacity: 0.45 }}>
+            sillygoosepottery@gmail.com
+          </a>
         </div>
       </section>
 
