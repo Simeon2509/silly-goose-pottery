@@ -6,7 +6,7 @@ import Link from 'next/link'
 const LINKS: [string, string][] = [
   ['Shop',      '/shop'],
   ['Custom',    '/custom'],
-  ['About',     '/#about'],
+  ['About',     '/about'],
   ['Process',   '/#process'],
   ['Instagram', 'https://instagram.com/sillygoosepottery'],
   ['Contact',   '/#contact'],

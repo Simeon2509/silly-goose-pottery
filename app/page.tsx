@@ -230,6 +230,58 @@ export default function Home() {
         <Link href="/custom"><button className="btn-rose">Learn About Custom Orders &rarr;</button></Link>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section style={{ padding: '7rem 4rem', borderTop: '1px solid rgba(184,92,82,0.15)' }}>
+        <div style={{ maxWidth: '560px', marginBottom: '4rem' }}>
+          <p style={{ fontSize: '0.7rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--rose)', marginBottom: '1rem' }}>Kind Words</p>
+          <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)' }}>
+            From people who use the work
+          </h2>
+        </div>
+        <div className="testimonials-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+          {([
+            {
+              quote: 'I ordered a custom mug set for our café and the response from customers has been incredible. People ask about them every single week.',
+              name: 'Sarah M.',
+              detail: 'Café owner, Denver',
+              product: 'Custom Café Set',
+            },
+            {
+              quote: 'The petal bowl is the most beautiful thing in our home. It sits on our dining table and every guest asks where it\'s from. Worth every penny.',
+              name: 'Jamie L.',
+              detail: 'Shop customer',
+              product: 'Petal Bowl No. 1',
+            },
+            {
+              quote: 'We commissioned ceramic favors for our wedding and they were perfect. Guests still message us saying they use them every day.',
+              name: 'Cora & Dan',
+              detail: 'Wedding commission',
+              product: 'Custom Wedding Favors',
+            },
+          ] as { quote: string, name: string, detail: string, product: string }[]).map(t => (
+            <div key={t.name} style={{
+              padding: '2rem',
+              background: 'var(--cream-dark)',
+              borderRadius: '4px',
+              borderTop: '2px solid var(--rose)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              gap: '1.5rem',
+            }}>
+              <p style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.15rem', fontWeight: 300, lineHeight: 1.7, color: 'var(--ink)', fontStyle: 'italic' }}>
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div>
+                <div style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--ink)', marginBottom: '0.2rem' }}>{t.name}</div>
+                <div style={{ fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.45 }}>{t.detail}</div>
+                <div style={{ fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--rose)', marginTop: '0.3rem', opacity: 0.8 }}>{t.product}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section id="contact" style={{ padding: '7rem 4rem', background: 'var(--cream-dark)', borderTop: '1px solid rgba(184,92,82,0.15)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '6rem', alignItems: 'start' }} className="contact-grid">

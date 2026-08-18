@@ -151,4 +151,12 @@ nav a:hover { opacity: 1 !important; }
 
   /* Custom page Good To Know */
   .good-to-know-grid { grid-template-columns: 1fr 1fr !important; gap: 1.25rem !important; }
+
+  /* Testimonials */
+  .testimonials-grid { grid-template-columns: 1fr !important; }
+
+  /* About page */
+  .about-page-hero { grid-template-columns: 1fr !important; }
+  .about-story-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .about-goose-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
 }
