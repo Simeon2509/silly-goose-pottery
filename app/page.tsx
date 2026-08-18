@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
   title: 'Handthrown Ceramics & Custom Pottery · Denver, CO',
@@ -253,23 +254,29 @@ export default function Home() {
         <Link href="/custom"><button className="btn-rose">Learn About Custom Orders &rarr;</button></Link>
       </section>
 
-      {/* CTA */}
-      <div id="contact" className="cta-strip" style={{ background: 'var(--rose)', padding: '5rem 4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '3rem' }}>
-        <div>
-          <p style={{ fontSize: '0.7rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(240,237,230,0.6)', marginBottom: '0.5rem' }}>Commission a Piece</p>
-          <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(1.8rem, 3vw, 3rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--cream)' }}>
-            Something made<br />just for you
-          </h2>
+      {/* CONTACT */}
+      <section id="contact" style={{ padding: '7rem 4rem', background: 'var(--cream-dark)', borderTop: '1px solid rgba(184,92,82,0.15)' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '6rem', alignItems: 'start' }} className="contact-grid">
+          <div>
+            <p style={{ fontSize: '0.7rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--rose)', marginBottom: '1rem' }}>Get in Touch</p>
+            <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2rem, 3.5vw, 3.2rem)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', marginBottom: '1.5rem' }}>
+              Something made<br />just for you
+            </h2>
+            <p style={{ fontSize: '0.95rem', lineHeight: 1.85, opacity: 0.6, fontWeight: 300, marginBottom: '2.5rem' }}>
+              Whether you&apos;re after a custom commission, a set for your café, or just have a question about the shop — send a message and I&apos;ll get back to you within 2–3 days.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <a href="mailto:sillygoosepottery@gmail.com" style={{ fontSize: '0.78rem', letterSpacing: '0.1em', color: 'var(--rose-dark)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                <span style={{ opacity: 0.5 }}>✉</span> sillygoosepottery@gmail.com
+              </a>
+              <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.78rem', letterSpacing: '0.1em', color: 'var(--rose-dark)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                <span style={{ opacity: 0.5 }}>◎</span> @sillygoosepottery
+              </a>
+            </div>
+          </div>
+          <ContactForm />
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.75rem' }}>
-          <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer">
-            <button className="btn-cream">Start a Commission</button>
-          </a>
-          <a href="mailto:sillygoosepottery@gmail.com" style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: 'rgba(240,237,230,0.7)', textDecoration: 'none' }}>
-            sillygoosepottery@gmail.com
-          </a>
-        </div>
-      </div>
+      </section>
 
       {/* FOOTER */}
       <footer style={{ padding: '2.5rem 4rem', borderTop: '1px solid rgba(184,92,82,0.15)' }}>

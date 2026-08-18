@@ -79,4 +79,6 @@ nav a:hover { opacity: 1 !important; }
   .nav-links { display: none !important; }
   section, .section-pad { padding: 4rem 1.5rem !important; }
   .hero-left { padding: 3rem 1.5rem !important; }
+  .contact-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+  .form-row-split { grid-template-columns: 1fr !important; }
 }
