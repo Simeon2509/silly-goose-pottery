@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import Nav from '../Nav'
 
 export const metadata: Metadata = {
   title: 'Custom Ceramic Orders — Cafés, Restaurants & Events',
@@ -18,34 +19,7 @@ export default function Custom() {
   return (
     <main style={{ background: 'var(--cream)', minHeight: '100vh' }}>
 
-      {/* NAV */}
-      <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        padding: '1rem 3rem',
-        background: 'rgba(240,237,230,0.93)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(184,92,82,0.15)',
-      }}>
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none' }}>
-          <Image src="/logo.jpg" alt="Silly Goose Pottery logo" width={88} height={88} style={{ objectFit: 'contain', borderRadius: '2px' }} />
-          <span style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.2rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--rose-dark)' }}>
-            Silly Goose Pottery
-          </span>
-        </Link>
-        <ul className="nav-links" style={{ display: 'flex', gap: '2.5rem', listStyle: 'none' }}>
-          {([['Shop','/shop'],['Custom','/custom'],['About','/#about'],['Process','/#process'],['Instagram','https://instagram.com/sillygoosepottery'],['Contact','/#contact']] as [string,string][]).map(([label, href]) => (
-            <li key={label}>
-              <a href={href} target={label === 'Instagram' ? '_blank' : undefined} rel={label === 'Instagram' ? 'noopener noreferrer' : undefined} style={{ fontSize: '0.73rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: label === 'Custom' ? 'var(--rose)' : 'var(--ink)', opacity: label === 'Custom' ? 1 : 0.55, textDecoration: 'none' }}>
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <a href="https://instagram.com/sillygoosepottery" target="_blank" rel="noopener noreferrer">
-          <button className="btn-rose">Get in Touch</button>
-        </a>
-      </nav>
+      <Nav active="Custom" ctaLabel="Get in Touch" ctaHref="/#contact" />
 
       {/* HERO */}
       <section style={{ paddingTop: '140px', paddingBottom: '6rem', paddingLeft: '4rem', paddingRight: '4rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center', borderBottom: '1px solid rgba(184,92,82,0.15)' }}>

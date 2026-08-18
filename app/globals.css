@@ -68,7 +68,43 @@ nav a:hover { opacity: 1 !important; }
 .product-card:hover .product-img { transform: scale(1.04); }
 .product-img { transition: transform 0.5s ease; }
 
+/* HAMBURGER */
+.sgp-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.sgp-burger span {
+  display: block; height: 2px; width: 100%;
+  background: var(--ink); border-radius: 2px;
+  transition: transform .25s ease, opacity .25s ease;
+  transform-origin: center;
+}
+.sgp-burger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.sgp-burger--open span:nth-child(2) { opacity: 0; }
+.sgp-burger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* MOBILE DRAWER */
+.sgp-drawer {
+  position: fixed; top: 0; right: 0; z-index: 220;
+  width: min(300px, 82vw); height: 100dvh;
+  background: var(--cream);
+  border-left: 1px solid rgba(184,92,82,0.15);
+  display: flex; flex-direction: column;
+  padding: 5rem 2rem 2rem;
+  transform: translateX(100%);
+  transition: transform .3s ease;
+  overflow-y: auto;
+}
+.sgp-drawer--open { transform: translateX(0); }
+
 @media (max-width: 768px) {
+  .sgp-burger { display: flex; }
+  .nav-cta-wrap { display: none; }
+
   .hero-grid { grid-template-columns: 1fr !important; }
   .about-grid { grid-template-columns: 1fr !important; }
   .steps-grid { grid-template-columns: 1fr 1fr !important; }

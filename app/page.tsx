@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from './ContactForm'
+import Nav from './Nav'
 
 export const metadata: Metadata = {
   title: 'Handthrown Ceramics & Custom Pottery · Denver, CO',
@@ -58,32 +59,7 @@ export default function Home() {
     <main style={{ background: 'var(--cream)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PRODUCT_SCHEMA) }} />
 
-      {/* NAV */}
-      <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        padding: '1rem 3rem',
-        background: 'rgba(240,237,230,0.93)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(184,92,82,0.15)',
-      }}>
-        <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none' }}>
-          <Image src="/logo.jpg" alt="Silly Goose Pottery logo" width={88} height={88} style={{ objectFit: 'contain', borderRadius: '2px' }} />
-          <span style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.2rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--rose-dark)' }}>
-            Silly Goose Pottery
-          </span>
-        </a>
-        <ul className="nav-links" style={{ display: 'flex', gap: '2.5rem', listStyle: 'none' }}>
-          {([['Shop','/shop'],['Custom','/custom'],['About','#about'],['Process','#process'],['Instagram','https://instagram.com/sillygoosepottery'],['Contact','#contact']] as [string,string][]).map(([label, href]) => (
-            <li key={label}>
-              <a href={href} target={label === 'Instagram' ? '_blank' : undefined} rel={label === 'Instagram' ? 'noopener noreferrer' : undefined} style={{ fontSize: '0.73rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.55, textDecoration: 'none' }}>
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <Link href="/shop"><button className="btn-rose">Shop Now</button></Link>
-      </nav>
+      <Nav ctaLabel="Shop Now" ctaHref="/shop" />
 
       {/* HERO */}
       <section id="top" className="hero-grid" style={{ minHeight: '100vh', display: 'grid', gridTemplateColumns: '1fr 1fr', paddingTop: '80px' }}>
