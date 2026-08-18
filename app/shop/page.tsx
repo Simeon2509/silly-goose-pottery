@@ -37,7 +37,7 @@ export default function Shop() {
       <Nav active="Shop" ctaLabel="Order on Instagram" ctaHref="https://instagram.com/sillygoosepottery" ctaExternal />
 
       {/* SHOP HEADER */}
-      <div style={{ paddingTop: '140px', paddingBottom: '4rem', paddingLeft: '4rem', paddingRight: '4rem', borderBottom: '1px solid rgba(184,92,82,0.15)' }}>
+      <div className="shop-header" style={{ paddingTop: '140px', paddingBottom: '4rem', paddingLeft: '4rem', paddingRight: '4rem', borderBottom: '1px solid rgba(184,92,82,0.15)' }}>
         <p style={{ fontSize: '0.7rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--rose)', marginBottom: '1rem' }}>All Pieces</p>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '1rem' }}>
           <h1 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)' }}>
@@ -50,7 +50,7 @@ export default function Shop() {
       </div>
 
       {/* PRODUCT GRID */}
-      <div style={{ padding: '4rem', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '3rem' }}>
+      <div className="shop-grid product-grid" style={{ padding: '4rem', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '3rem' }}>
         {PRODUCTS.map(p => (
           <div key={p.name} style={{ cursor: 'pointer' }}>
             <div style={{ overflow: 'hidden', borderRadius: '4px', marginBottom: '1.2rem', aspectRatio: '1/1', background: 'var(--cream-dark)' }}>
@@ -77,7 +77,7 @@ export default function Shop() {
       </div>
 
       {/* CTA BANNER */}
-      <div style={{ background: 'var(--rose)', padding: '4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+      <div className="shop-cta" style={{ background: 'var(--rose)', padding: '4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
         <div>
           <p style={{ fontSize: '0.7rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(240,237,230,0.65)', marginBottom: '0.5rem' }}>Want something custom?</p>
           <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, color: 'var(--cream)', lineHeight: 1.2 }}>

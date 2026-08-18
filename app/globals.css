@@ -105,6 +105,11 @@ nav a:hover { opacity: 1 !important; }
   .sgp-burger { display: flex; }
   .nav-cta-wrap { display: none; }
 
+  /* Nav logo */
+  .nav-logo-text { display: none; }
+  .nav-logo-img { width: 44px !important; height: 44px !important; }
+
+  /* Layouts */
   .hero-grid { grid-template-columns: 1fr !important; }
   .about-grid { grid-template-columns: 1fr !important; }
   .steps-grid { grid-template-columns: 1fr 1fr !important; }
@@ -117,4 +122,25 @@ nav a:hover { opacity: 1 !important; }
   .hero-left { padding: 3rem 1.5rem !important; }
   .contact-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
   .form-row-split { grid-template-columns: 1fr !important; }
+
+  /* Shop page */
+  .shop-header { padding: 5.5rem 1.5rem 2.5rem !important; }
+  .shop-grid { padding: 2.5rem 1.5rem !important; gap: 2rem !important; }
+  .shop-cta { padding: 3rem 1.5rem !important; flex-direction: column !important; align-items: flex-start !important; }
+
+  /* Custom page hero */
+  .custom-hero {
+    grid-template-columns: 1fr !important;
+    padding-top: 5.5rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-bottom: 3rem !important;
+    gap: 2.5rem !important;
+  }
+
+  /* Custom page What We Make cards */
+  .what-we-make-card { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+
+  /* Custom page Good To Know */
+  .good-to-know-grid { grid-template-columns: 1fr 1fr !important; }
 }

@@ -52,8 +52,8 @@ export default function Nav({
         borderBottom: '1px solid rgba(184,92,82,0.15)',
       }}>
         <Link href="/" onClick={close} style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none' }}>
-          <Image src="/logo.jpg" alt="Silly Goose Pottery" width={88} height={88} style={{ objectFit: 'contain', borderRadius: '2px' }} />
-          <span style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.2rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--rose-dark)' }}>
+          <Image src="/logo.jpg" alt="Silly Goose Pottery" width={88} height={88} className="nav-logo-img" style={{ objectFit: 'contain', borderRadius: '2px' }} />
+          <span className="nav-logo-text" style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.2rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--rose-dark)' }}>
             Silly Goose Pottery
           </span>
         </Link>

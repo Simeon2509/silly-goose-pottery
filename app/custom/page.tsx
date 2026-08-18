@@ -22,7 +22,7 @@ export default function Custom() {
       <Nav active="Custom" ctaLabel="Get in Touch" ctaHref="/#contact" />
 
       {/* HERO */}
-      <section style={{ paddingTop: '140px', paddingBottom: '6rem', paddingLeft: '4rem', paddingRight: '4rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center', borderBottom: '1px solid rgba(184,92,82,0.15)' }}>
+      <section className="custom-hero" style={{ paddingTop: '140px', paddingBottom: '6rem', paddingLeft: '4rem', paddingRight: '4rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'center', borderBottom: '1px solid rgba(184,92,82,0.15)' }}>
         <div>
           <p style={{ fontSize: '0.7rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--rose)', marginBottom: '1.2rem' }}>Custom & Wholesale</p>
           <h1 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2.8rem, 5vw, 5rem)', fontWeight: 300, lineHeight: 1.05, color: 'var(--ink)', marginBottom: '1.8rem' }}>
@@ -95,7 +95,7 @@ export default function Custom() {
               body: 'If you\'re opening a new studio, celebrating a milestone, or looking for a gift that\'s genuinely thoughtful — custom ceramics make a lasting impression. We can create a set of pieces in your brand\'s palette, or simply make something beautiful that reflects your values. Handmade things carry a story, and that\'s exactly what a good gift should do.',
             },
           ] as {title:string,img:string,imgAlt:string,body:string}[]).map(item => (
-            <div key={item.title} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', alignItems: 'start', paddingTop: '2.5rem', borderTop: '1px solid rgba(184,92,82,0.2)' }}>
+            <div key={item.title} className="what-we-make-card" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', alignItems: 'start', paddingTop: '2.5rem', borderTop: '1px solid rgba(184,92,82,0.2)' }}>
               <div style={{ aspectRatio: '1/1', borderRadius: '4px', overflow: 'hidden' }}>
                 <Image src={item.img} alt={item.imgAlt} width={700} height={700} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
@@ -159,7 +159,7 @@ export default function Custom() {
             A few things worth mentioning
           </h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+        <div className="good-to-know-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
           {([
             {
               title: 'Minimum Quantities',
